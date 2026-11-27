@@ -114,3 +114,13 @@ h1 span { color: var(--accent); }
 
 .foot { margin-top: 30px; font-size: 14px; color: var(--muted); }
 .follow { display: block; margin-top: 26px; text-align: center; text-decoration: none; }
+
+/* 언어 */
+.top .tr { display: flex; align-items: center; gap: 10px; }
+.lbtn { border: 1.5px solid var(--line); background: transparent; color: var(--text); font: inherit; font-size: 14px; padding: 4px 10px; border-radius: 999px; cursor: pointer; }
+.picker { position: fixed; inset: 0; z-index: 10; background: rgba(20, 18, 22, 0.78); display: flex; align-items: flex-end; justify-content: center; }
+.picker .sheet { width: 100%; max-width: 560px; background: var(--bg); border-radius: 24px 24px 0 0; padding: 24px 20px calc(28px + env(safe-area-inset-bottom)); }
+.picker h2 { font-size: 22px; }
+.picker .sub { margin-top: 4px; font-size: 14px; color: var(--muted); }
+.picker .lang { margin-top: 12px; font-size: 19px; }
+.picker .lang.cur { border-color: var(--accent); color: var(--accent); }
