@@ -50,6 +50,7 @@
 		document.body.appendChild(box);
 	}
 
+	function links() { return '<p class="links"><a href="' + ROOT + 'about/">' + esc(t('aboutTitle')) + '</a> · <a href="' + ROOT + 'privacy/">' + esc(t('privacyTitle')) + '</a></p>'; }
 	function top() {
 		return '<div class="top"><span><b>' + esc(t('brand')) + '</b> · ' + esc(t('free')) + '</span><span class="tr"><button class="lbtn" data-act="lang" aria-label="' + esc(langName()) + '">🌐 ' + LANG.toUpperCase() + '</button><a href="' + IG + '">@linei.fit</a></span></div>';
 	}
@@ -72,7 +73,7 @@
 			'<p class="intro">' + esc(t('intro')) + '</p>' +
 			(going.length ? '<div class="sec">' + esc(t('going')) + '</div><div class="list">' + going.map(item).join('') + '</div>' : '') +
 			'<div class="sec">' + esc(going.length ? t('others') : t('all')) + '<span>' + esc(t('n', {n: rest.length})) + '</span></div><div class="list">' + rest.map(item).join('') + '</div>' +
-			'<a class="btn ghost follow" href="' + IG + '">' + esc(t('follow')) + '</a>';
+			'<a class="btn ghost follow" href="' + IG + '">' + esc(t('follow')) + '</a>' + links();
 		app.onclick = function (e) { if (e.target.closest('[data-act="lang"]')) picker(); };
 	}
 
@@ -134,7 +135,7 @@
 			done + todayBox +
 			'<div class="sec">' + esc(p.weekly ? t('gridWeekly') : t('gridDaily')) + '<span>' + esc(t('gridTotal', {total: p.total, unit: p.unit})) + '</span></div>' + grid +
 			rec + how + next +
-			'<p class="foot">' + p.caution + (st.start ? ' · <a href="#" data-act="reset">' + esc(t('reset')) + '</a>' : '') + '</p>';
+			'<p class="foot">' + p.caution + (st.start ? ' · <a href="#" data-act="reset">' + esc(t('reset')) + '</a>' : '') + '</p>' + links();
 
 		app.onclick = function (e) {
 			var b = e.target.closest('[data-act],[data-dot]');

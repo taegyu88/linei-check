@@ -124,3 +124,10 @@ h1 span { color: var(--accent); }
 .picker .sub { margin-top: 4px; font-size: 14px; color: var(--muted); }
 .picker .lang { margin-top: 12px; font-size: 19px; }
 .picker .lang.cur { border-color: var(--accent); color: var(--accent); }
+
+/* 소개·개인정보 */
+.doc { margin-top: 18px; }
+.doc p { margin-top: 14px; font-size: 17px; line-height: 1.6; color: var(--muted); }
+.doc p a, .links a { color: var(--text); }
+.doc .upd { font-size: 14px; }
+.links { margin-top: 18px; font-size: 14px; color: var(--muted); text-align: center; }
