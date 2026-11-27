@@ -107,7 +107,7 @@
 			return '<div class="week"><div class="wk">' + esc(r.label) + '</div><div class="dots" style="grid-template-columns:repeat(' + Math.min(r.count, 7) + ',minmax(0,44px))">' + dots + '</div>' + (r.note ? '<div class="note">' + r.note + '</div>' : '') + '</div>';
 		}).join('');
 
-		var cards = '<div class="cards">' + p.cards.map(function (c) {
+		var cards = '<div class="cards' + (p.wide ? ' wide' : '') + '">' + p.cards.map(function (c) {
 			return '<div class="card ' + c.kind + '"><img src="' + BASE + 'img/' + c.img + '" alt=""' + (c.pos ? ' style="object-position:' + c.pos + '"' : '') + ' loading="lazy"><span class="badge">' + c.badge + '</span><p class="cap">' + c.label + '</p></div>';
 		}).join('') + '</div>';
 
